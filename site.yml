@@ -19,9 +19,9 @@
          image: "{{ ami }}"
          wait: true
          volumes:
-            - device_name: /dev/xvda
-            volume_type: gp2  #insert the volume code here
-            volume_size: 20  #size is in GB
+            - device_name: /dev/sda1
+              volume_type: gp2  #insert the volume code here
+              volume_size: 20  #size is in GB
          region: "{{ region }}"
          count: 1  # default
          count_tag:
