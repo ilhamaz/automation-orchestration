@@ -1,5 +1,8 @@
-Assignments - Automation & Orchestration
+####Assignments - Automation & Orchestration
 
+##########Prerequisites########
+
+###Install Ansible on Ubuntu:
 apt-get update
 apt-get install software-properties-common
 apt-add-repository ppa:ansible/ansible
@@ -7,7 +10,29 @@ apt-get update
 apt-get install ansible
 
 
-
-
 ssh-keygen -t rsa
 ssh-copy-id -i .ssh/id_rsa.pub root@128.199.53.121
+
+### First Ansible Test Host file
+[nodes]
+128.199.53.121
+
+#
+root@ubuntu-s:~# ansible all -m ping                      
+128.199.53.121 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+
+########### Tasks
+
+1)	Create 5 AWS EC2 instances in the same zone. Tag 2 instances as “web”, 2 as “db”, 1 as “backup”. 
+	Instances must have 20 Gb volumes each. Web instances must have external IP addresses. 
+Launch all instances
+Restart web servers only
+Stop db servers only
+Resize attached volume for backup server
+Terminate all instances and volumes
+
+
+
