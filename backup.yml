@@ -23,11 +23,11 @@
               volume_type: gp2  #insert the volume code here
               volume_size: 20  #size is in GB
          region: "{{ region }}"
-         count: 1  # default
+         count: 1 # default
          count_tag:
-            Name: Demo
+            Name: backup
          instance_tags:
-            Name: Demo
+            Name: backup
          vpc_subnet_id: subnet-0c228fa0509720bd0
          assign_public_ip: yes
       register: ec2
