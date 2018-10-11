@@ -1,4 +1,4 @@
-####Assignments - Automation & Orchestration
+####Assignments - Automation & Orchestration ####
 
 ##########Prerequisites########
 
@@ -24,7 +24,7 @@ root@ubuntu-s:~# ansible all -m ping
     "ping": "pong"
 }
 
-########### Tasks
+########### Tasks #######################
 
 1)	Create 5 AWS EC2 instances in the same zone. Tag 2 instances as “web”, 2 as “db”, 1 as “backup”. 
 	Instances must have 20 Gb volumes each. Web instances must have external IP addresses. 
@@ -33,6 +33,9 @@ Restart web servers only
 Stop db servers only
 Resize attached volume for backup server
 Terminate all instances and volumes
+
+site.yml <- attached, at tis moment i can create 1 instances
+
 
 
 
